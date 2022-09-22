@@ -1,23 +1,23 @@
 package com.in28Minutes.rest.webservices.restfulwebservices.exception;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class ExceptionResponse {
-    private Date timestamp;
+    private LocalDateTime timestamp;
     private String message;
     private String details;
 
-    public ExceptionResponse(Date timestamp, String message, String details) {
+    public ExceptionResponse(LocalDateTime timestamp, String message, String details) {
         this.timestamp = timestamp;
         this.message = message;
         this.details = details;
     }
 
-    public Date getTimestamp() {
+    public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Date timestamp) {
+    public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
 

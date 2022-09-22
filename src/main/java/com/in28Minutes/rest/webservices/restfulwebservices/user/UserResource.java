@@ -26,7 +26,7 @@ public class UserResource {
     public User retrieveUser(@PathVariable int id){
         User user = service.findUser(id);
         if (user == null)
-            throw new UserNotFoundException("id-" + id);
+            throw new UserNotFoundException("id: " + id);
 
         return user;
     }
@@ -40,8 +40,7 @@ public class UserResource {
     @PostMapping("/users")
     public ResponseEntity<Object> createUser(@RequestBody User user){
         User savedUser = service.save(user);
-        // CREATED
-        // /user/savedUser.getId()
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")

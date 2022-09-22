@@ -1,6 +1,6 @@
 package com.in28Minutes.rest.webservices.restfulwebservices.user;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class User {
 
@@ -10,19 +10,19 @@ public class User {
     /**
      * In the tutorial, it is written as birthDate, with a capital B, but here it is all lower case.
      */
-    private Date birthdate;
+    private LocalDate birthdate;
 
-    public User(Integer id, String name, Date birthdate) {
+    public User(Integer id, String name, LocalDate birthdate) {
         this.id = id;
         this.name = name;
         this.birthdate = birthdate;
     }
 
-    public Date getBirthdate() {
+    public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
 
